@@ -1,5 +1,5 @@
 <?
-function m_cache($func_name, $cache_file_name, $sec , $path="/web/bbs.imeimama.com/cache/"){
+hbfunction m_cache($func_name, $cache_file_name, $sec , $path="/web/bbs.imeimama.com/cache/"){
     $cache_file_name = $path.$cache_file_name;
     $mark_file_name = $cache_file_name."_mark";
     if(!file_exists($cache_file_name) || (((time() - @filemtime($cache_file_name)) > $sec) && (@file_get_contents($mark_file_name) !=1)) ){
